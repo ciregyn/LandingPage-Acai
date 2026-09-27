@@ -1,0 +1,386 @@
+/* RESET BÁSICO  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  VARIÁVEIS DE COR (extraídas da nossa logo) */
+:root {
+    --roxo-escuro: #2E0836;
+    --roxo-medio: #6F0C68;
+    --rosa: #FC428F;
+    --dourado: #FEC94B;
+    --branco-gelo: #FDFBF7;
+    --texto-escuro: #2B1B3D;
+}
+
+/*  TIPOGRAFIA BASE  */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--branco-gelo);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== HEADER ===== */
+.cabecalho {
+    background-color: var(--roxo-escuro);
+    padding: 16px 5%;
+}
+
+.cabecalho .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo span {
+    color: var(--branco-gelo);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-principal ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.menu-principal a {
+    color: var(--branco-gelo);
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+    color: var(--dourado);
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(180deg, var(--roxo-escuro), var(--roxo-medio));
+    text-align: center;
+    padding: 60px 5% 70px;
+    color: var(--branco-gelo);
+}
+
+.hero-logo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--dourado);
+    margin: 0 auto 24px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    font-weight: normal;
+    color: var(--dourado);
+    margin-bottom: 28px;
+}
+
+.botao-cta {
+    display: inline-block;
+    background-color: var(--rosa);
+    color: white;
+    padding: 14px 34px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-cta:hover {
+    background-color: var(--dourado);
+    color: var(--roxo-escuro);
+}
+
+/* ===== CARDÁPIO ===== */
+#cardapio {
+    padding: 60px 5%;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 28px;
+    color: var(--roxo-escuro);
+    margin-bottom: 40px;
+}
+
+.faixa-cardapio {
+    margin-bottom: 44px;
+}
+
+.faixa-titulo {
+    display: inline-block;
+    background-color: var(--rosa);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card-produto {
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.card-produto:hover {
+    transform: translateY(-6px);
+}
+
+.card-produto img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 14px 16px;
+}
+
+.card-info h4 {
+    color: var(--roxo-escuro);
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.card-info p {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.preco {
+    color: var(--rosa);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ===== CARDÁPIO COMPLETO (página) ===== */
+.subtitulo-pagina {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.cardapio-completo {
+    padding: 60px 5%;
+}
+
+.card-desc {
+    font-size: 12px;
+    opacity: 0.65;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.lista-tamanhos {
+    list-style: none;
+}
+
+.lista-tamanhos li {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    border-bottom: 1px solid #f0e9f2;
+    font-size: 13px;
+}
+
+.lista-tamanhos li:last-child {
+    border-bottom: none;
+}
+
+.lista-tamanhos li span:first-child {
+    opacity: 0.65;
+}
+
+.lista-tamanhos li span:last-child {
+    color: var(--rosa);
+    font-weight: bold;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+    background-color: var(--roxo-medio);
+    color: var(--branco-gelo);
+    text-align: center;
+    padding: 60px 5%;
+}
+
+.sobre .titulo-secao {
+    color: var(--branco-gelo);
+}
+
+.texto-sobre {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+
+
+/* ===== CONTATO ===== */
+#contato {
+    padding: 60px 5%;
+}
+
+.container-contato {
+    display: flex;
+    gap: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.info-contato p {
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+.info-contato strong {
+    color: var(--rosa);
+}
+
+/* ===== FORMULÁRIO DE CONTATO ===== */
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formulario-contato label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--roxo-escuro);
+    margin-top: 8px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.formulario-contato button {
+    margin-top: 16px;
+}
+
+/* ===== FOOTER ===== */
+.rodape {
+    background-color: var(--roxo-escuro);
+    color: var(--branco-gelo);
+    text-align: center;
+    padding: 30px 5%;
+}
+
+.rodape-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 12px;
+}
+
+.rodape p {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* ===== TABLET (telas até 900px) ===== */
+@media (max-width: 900px) {
+
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+}
+
+/* ===== MOBILE (telas até 600px) ===== */
+@media (max-width: 600px) {
+
+    .cabecalho .container {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .menu-principal ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .container-contato {
+        flex-direction: column;
+    }
+
+}
